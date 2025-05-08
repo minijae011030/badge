@@ -4,8 +4,8 @@ export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
   const text = searchParams.get("text") ?? "Default";
 
-  const paddingX = 8;
-  const paddingY = 4;
+  const paddingX = 10;
+  const paddingY = 5;
   const fontSize = 12;
 
   const approxCharWidth = 7;
@@ -15,10 +15,10 @@ export async function GET(req: Request) {
 
   const svg = `
 <svg xmlns="http://www.w3.org/2000/svg" width="${badgeWidth}" height="${badgeHeight}">
-  <rect rx="4" width="${badgeWidth}" height="${badgeHeight}" fill="gray"/>
+  <rect rx="3" width="${badgeWidth}" height="${badgeHeight}" fill="#b0b0b0"/>
   <text
     x="${paddingX}"
-    y="${badgeHeight / 2}"
+    y="${badgeHeight / 2 + 1}"
     font-family="sans-serif"
     font-size="${fontSize}"
     fill="white"
