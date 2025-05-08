@@ -19,11 +19,10 @@ export async function GET(req: Request) {
   <text
     x="${paddingX}"
     y="${badgeHeight / 2 + 1}"
-    font-family="sans-serif"
     font-size="${fontSize}"
     fill="white"
     dominant-baseline="middle"
-    lengthAdjust="spacing"
+    font-family="monospace"
     textLength="${textWidth}"
   >
     ${text}
